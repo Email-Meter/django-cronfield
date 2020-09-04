@@ -23,5 +23,4 @@ class CronWidget(forms.TextInput):
         css = {
             'all': ('cronfield/crontab_widget.css',)
         }
-        jQUERY_SOURCE_URL = '//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'  # Not working with 1.9.1 !
-        js = (jQUERY_SOURCE_URL, 'cronfield/crontab_widget.js',)
+        js = ('cronfield/crontab_widget.js',)
