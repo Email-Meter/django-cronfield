@@ -20,7 +20,12 @@ function CronCalendar(inputElement, targetElement) {
   
 	var me = this;
 	var nCalendars = 5;
-	this.cronStringArray = $(inputElement).val().split(" ", nCalendars);
+	var inputValue = $(inputElement).val();
+	if(inputValue) {
+	    this.cronStringArray = django.jQuery(inputElement).val().split(" ", nCalendars);
+    } else {
+	    this.cronStringArray = ["", "", "", "", ""];
+    }
 
 	// create and initialize all 5 calendar elements
 	var labelsMonths = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
